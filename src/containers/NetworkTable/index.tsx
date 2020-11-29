@@ -83,12 +83,19 @@ export const NetworkTable = (props: NetworkTableProps) => {
         },
       },
       {
-        Header: "URL",
-        accessor: (row) => row.url,
-      },
-      {
         Header: "Status",
         accessor: (row) => <Status status={row.status} />,
+      },
+      {
+        Header: "Time",
+        accessor: (row) => {
+          let time = Math.round(row.time);
+          if (time > 1000) {
+            return((time/1000).toFixed(2) + ' s')
+          } else {
+            return(time + ' ms')
+          }
+        },
       },
     ] as TableProps<NetworkRequest>["columns"];
 

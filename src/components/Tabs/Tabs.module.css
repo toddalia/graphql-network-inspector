@@ -6,13 +6,12 @@
 
 .tabs {
   display: flex;
-  background-color: #232729;
-  border-bottom: 1px solid #3d4043;
+  background-color: #F1F1F1;
+  border-bottom: 1px solid #aaa;
 }
 
 .tab {
-  background: none;
-  color: #fff;
+  color:#2B3239;
   padding: 5px 10px;
   border: none;
   cursor: pointer;
@@ -22,17 +21,18 @@
 
 .tabTitle {
   margin: 0;
-  line-height: 1.5rem;
-  font-weight: bold;
-  color: #fff;
+  line-height: 1.4rem;
+  font-weight: normal;
+  /* color: #fff; */
 }
 
 .tabActive {
-  background-color: #17181a;
+  border-bottom: 2px solid #536DFE;
+  /* background-color: #17181a; */
 }
 
 .tabActive .tabTitle {
-  color: #0458cf;
+  /* color: #0458cf; */
 }
 
 .tabContent {

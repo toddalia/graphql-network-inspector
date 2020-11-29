@@ -12,12 +12,12 @@ export const JsonView = (props: JsonViewProps) => {
       <ReactJson
         name={null}
         src={props.src}
-        theme="tomorrow"
-        style={{ background: "#1c2123" }}
-        enableClipboard={false}
+        // theme="tomorrow"
+        // style={{ background: "#1c2123" }}
+        enableClipboard={true}
         displayDataTypes={false}
         displayObjectSize={false}
-        collapsed={2}
+        collapsed={3}
       />
     </div>
   );

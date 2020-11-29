@@ -5,6 +5,9 @@
 }
 
 .button {
+  position: absolute;
+  top: .3rem;
+  right: .6rem;
   font-size: 1.2rem;
   background: #505356;
   border: none;

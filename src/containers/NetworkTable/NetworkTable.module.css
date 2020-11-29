@@ -27,9 +27,9 @@
 
 .query {
   display: flex;
-  width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* width: 180px; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
 }
 .queryType {
   text-transform: capitalize;

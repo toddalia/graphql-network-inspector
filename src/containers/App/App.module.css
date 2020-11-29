@@ -7,10 +7,10 @@
 .networkTable {
   width: 100%;
   min-height: 100vh;
-  border-right: 1px solid #3d4043;
+  border-right: 1px solid #aaa;
 }
 
 .networkPanel {
   width: 100%;
-  background-color: #1c2022;
+  /* background-color: #1c2022; */
 }

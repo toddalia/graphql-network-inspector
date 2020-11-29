@@ -12,6 +12,7 @@ export type Header = { name: string; value?: string };
 export type NetworkRequest = {
   id: string;
   status: number;
+  time: number,
   url: string;
   request: {
     primaryOperation: OperationDetails;
@@ -58,6 +59,7 @@ export const useNetworkMonitor = (): [NetworkRequest[], () => void] => {
       updateRequest({
         id: requestId,
         status: details.response.status,
+        time: details.time,
         url: details.request.url,
         request: {
           primaryOperation,

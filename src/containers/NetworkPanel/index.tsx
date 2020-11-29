@@ -38,19 +38,24 @@ export const NetworkPanel = (props: NetworkPanelProps) => {
                 {requestBody.map(({ query, variables }) => (
                   <div key={query} className={classes.query}>
                     <CopyButton textToCopy={query} />
-                    <h2 className={classes.subtitle}>Request</h2>
                     <CodeBlock text={query} language={"graphql"} />
-                    <h2 className={classes.subtitle}>Variables</h2>
-                    <CodeBlock
-                      text={
-                        safeJson.stringify(variables || {}, undefined, 4) || ""
-                      }
-                      language={"json"}
-                    />
                   </div>
                 ))}
               </div>
             ),
+          },
+          {
+            title: "Variables",
+            component: () => (
+              <div>
+                {requestBody.map(({ query, variables }) => (
+                  <div key={query} className={classes.query}>
+                    {/* <CopyButton textToCopy={variables} /> */}
+                    <CodeBlock text={ safeJson.stringify(variables || {}, undefined, 4) || "" } language={"json"} />
+                  </div>
+                ))}
+              </div>
+            )
           },
           {
             title: "Response",
